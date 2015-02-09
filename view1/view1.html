@@ -1,0 +1,34 @@
+<p>This is the partial for view 1.</p>
+<p>{{3 + 5}}</p>
+<div>
+<input type="text" data-ng-model="data.label" value="search">
+<p>{{data.label}}</p>
+<button>{{data.label}}</button>
+</div>
+<div>
+	<li data-ng-repeat="repeat in repeats | filter:searchfilter | orderBy:orderProp">
+		<p>Name:{{repeat.name}}</p>
+		<p>Rank:{{repeat.title}}</p>
+	</li>
+	<p>{{toggleShowHideBoolean}}</p>
+</div>
+<div style="float:left" data-ng-repeat="btnInfo in hbuttons"><!--der repeat repeatet den Div das soll in den Button-->
+	<button class="btn" type="submit">{{btnInfo.name}}</button>
+	<a href="{{btnInfo.link}}">{{btnInfo.name}}</a>
+</div>
+<br>
+<div>
+<button class="btn btn-primary" data-ng-click="runFunction()">Run</button>
+<p>{{functionValue}}</p></div>
+<div>{{mainContent.body}}</div>
+<div>
+	<p>Search:</p>
+	<input type="text" data-ng-model="searchfilter">
+	Sort:
+	<select data-ng-model="orderProp">
+		<option value="name">Alphabetical</option>
+		<option value="rank">By Rank</option>
+
+	</select>
+</div>
+<!-- animationen next-->
