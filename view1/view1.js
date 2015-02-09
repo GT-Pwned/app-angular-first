@@ -10,6 +10,25 @@ angular.module('myApp.view1', ['ngRoute'])
 }])
 							//$Scope		//$scope
 .controller('View1Ctrl', [ "$scope", function($scope) {
+	$scope.Headerbuttons = [
+	{"name":"Home", "id":"Start"},
+	{"name":"Products", "id":"Products"},
+	{"name":"Impressum", "id":"Contact"},
+	{"name":"About us", "id":"Intention"},
+	{"name":"something", "id":"random"}];
+
+	$scope.Sidebar = [
+{"name":"1", "effect":"", "more":""},	
+{"name":"2", "effect":"", "more":""},
+{"name":"3", "effect":"", "more":""},
+{"name":"4", "effect":"", "more":""},
+{"name":"5", "effect":"", "more":""},
+{"name":"6", "effect":"", "more":""},
+{"name":"7", "effect":"", "more":""},
+{"name":"8", "effect":"", "more":""},
+{"name":"9", "effect":"", "more":""},
+	]
+/*	
 	$scope.toggleShowHideBoolean = true;
 	$scope.repeats = [
 	{"name":"Akx", "title":"Cpt", "rank":"2"},
@@ -28,5 +47,5 @@ angular.module('myApp.view1', ['ngRoute'])
 	{"name":"Impressum", "link":"#/view1/Impressum"},
 	{"name":"Home", "link":"#/view1/Home"},
 	{"name":"Products", "link":"#/view2/pricing"}]
-
+*/
 }]);

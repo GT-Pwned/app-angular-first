@@ -1,5 +1,33 @@
-<p>This is the partial for view 1.</p>
-<p>{{3 + 5}}</p>
+<div class="container-fluid">
+	<div class="head">picture</div>
+	<div class="Headerbuttons">
+		<a href="#/view1/{{headButton.id}}" data-ng-repeat="headButton in Headerbuttons">{{headButton.name}}</a>
+	</div>
+	<div class="sidebar">
+		<p>Search:<input type="text" data-ng-model="SearchInputSidebar"></p>
+		<table>
+			<tr data-ng-repeat="Sidebaritems in Sidebar | filter:SearchInputSidebar"><td>{{Sidebaritems.name}}</td></tr>
+		</table>
+	</div>
+	<div class="mainBody">
+		
+	</div>
+
+</div>
+
+
+
+
+<!--<div style="float:left" data-ng-repeat="btnInfo in hbuttons">
+	<a href="#/Menu/{{btnInfo.id}}">{{btnInfo.name}}</a>
+</div>
+<div style="float:left">
+	<table>
+		<tr data-ng-repeat="sidebarItems in Sidebar">
+			<td>{{sidebarItems.name}}</td>
+		</tr>
+	</table>
+</div>
 <div>
 <input type="text" data-ng-model="data.label" value="search">
 <p>{{data.label}}</p>
@@ -12,10 +40,7 @@
 	</li>
 	<p>{{toggleShowHideBoolean}}</p>
 </div>
-<div style="float:left" data-ng-repeat="btnInfo in hbuttons"><!--der repeat repeatet den Div das soll in den Button-->
-	<button class="btn" type="submit">{{btnInfo.name}}</button>
-	<a href="{{btnInfo.link}}">{{btnInfo.name}}</a>
-</div>
+<p>{{btnInfo}}</p>
 <br>
 <div>
 <button class="btn btn-primary" data-ng-click="runFunction()">Run</button>
@@ -30,5 +55,5 @@
 		<option value="rank">By Rank</option>
 
 	</select>
-</div>
+</div>-->
 <!-- animationen next-->
