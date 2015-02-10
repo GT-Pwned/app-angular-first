@@ -9,7 +9,7 @@ angular.module('myApp.view1', ['ngRoute'])
   });
 }])
 							//$Scope		//$scope
-.controller('View1Ctrl', [ "$scope", function($scope) {
+.controller('View1Ctrl', [ "$scope", "$http", function($scope, $http) {
 	$scope.Headerbuttons = [
 	{"name":"Home", "id":"Start"},
 	{"name":"Products", "id":"Products"},
@@ -18,16 +18,25 @@ angular.module('myApp.view1', ['ngRoute'])
 	{"name":"something", "id":"random"}];
 
 	$scope.Sidebar = [
-{"name":"1", "effect":"", "more":""},	
-{"name":"2", "effect":"", "more":""},
-{"name":"3", "effect":"", "more":""},
-{"name":"4", "effect":"", "more":""},
-{"name":"5", "effect":"", "more":""},
-{"name":"6", "effect":"", "more":""},
-{"name":"7", "effect":"", "more":""},
-{"name":"8", "effect":"", "more":""},
-{"name":"9", "effect":"", "more":""},
-	]
+	{"name":"1", "effect":"", "more":""},	
+	{"name":"2", "effect":"", "more":""},
+	{"name":"3", "effect":"", "more":""},
+	{"name":"4", "effect":"", "more":""},
+	{"name":"5", "effect":"", "more":""},
+	{"name":"6", "effect":"", "more":""},
+	{"name":"7", "effect":"", "more":""},
+	{"name":"8", "effect":"", "more":""},
+	{"name":"9", "effect":"", "more":""},];
+
+	$scope.mainColumn = [
+	{"title":"Home", "main":"muss eine Variable sein!", "style":"border: dotted;float: left"}];
+/*
+	$http.get('Objects/SidebarContent.json').success(function(data) {
+		$scope.sidebar = data;
+	}
+*/
+	//in eine json packen
+
 /*	
 	$scope.toggleShowHideBoolean = true;
 	$scope.repeats = [

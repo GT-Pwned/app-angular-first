@@ -1,16 +1,22 @@
 <div class="container-fluid">
-	<div class="head">picture</div>
+	<div class="head">
+		<p>picture</p>
+	</div>
 	<div class="Headerbuttons">
 		<a href="#/view1/{{headButton.id}}" data-ng-repeat="headButton in Headerbuttons">{{headButton.name}}</a>
 	</div>
 	<div class="sidebar">
 		<p>Search:<input type="text" data-ng-model="SearchInputSidebar"></p>
 		<table>
-			<tr data-ng-repeat="Sidebaritems in Sidebar | filter:SearchInputSidebar"><td>{{Sidebaritems.name}}</td></tr>
+			<tr data-ng-repeat="Sidebaritems in Sidebar | filter:SearchInputSidebar">
+				<td><a href="#/Objects/{{Sidebaritems.id}}">{{Sidebaritems.name}}</a></td>
+			</tr>
 		</table>
+		<!-- mit der Sidebar soll man dann in das View 2 kommen-->
 	</div>
-	<div class="mainBody">
-		
+	<div style="{{Column.style}}" class="mainColumn" data-ng-repeat="Column in mainColumn">
+		<h2>{{Column.title}}</h2>
+		<div>{{Column.main}}</div>
 	</div>
 
 </div>
