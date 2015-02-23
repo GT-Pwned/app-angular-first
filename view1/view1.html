@@ -2,15 +2,28 @@
 	<div class="head">
 		<p>picture</p>
 	</div>
-	<div class="Headerbuttons">
-		<a href="#/view1/{{headButton.id}}" data-ng-repeat="headButton in Headerbuttons">{{headButton.name}}</a>
+	<div style="float:left" class="Headerbuttons" data-ng-repeat="headButton in Headerbuttons">
+	<!--	<a href="#/view1/{{headButton.id}}" >{{headButton.name}}</a>-->
+	<button data-ng-click="loadContent">{{headButton.name}}</button>
 	</div>
+	<br>
+	<div><p>Buttons ohne repeat (funktioniert)</p>
+		<button data-ng-click="contentmain= contentmain + 4" data-ng-init="contentmain=1">Home</button>	
+		<button data-ng-click="contentmain= 'irgend ein Scope'" >Products</button>
+		<button data-ng-click="contentmain= 'irgend ein Scope'" >Impressum</button>
+		<button data-ng-click="contentmain= 'irgend ein Scope'" >About Us</button>
+		<button data-ng-click="contentmain = 1" >something</button>
+	</div>
+	<!--sollte trotzdem per repeat passieren und dann den Inhalt von einer externen Datei Laden-->
+	<span>Content: {{contentmain}}</span>
+	<br>
+
 	<div class="sidebar">
 		<p>Search:<input type="text" data-ng-model="SearchInputSidebar"></p>
 		<table>
 			<tr data-ng-repeat="Sidebaritems in Sidebar | filter:SearchInputSidebar">
-				<td><a href="#/Objects/{{Sidebaritems.id}}">{{Sidebaritems.name}}</a></td>
-			</tr>
+				<td><a href="#/view2">{{Sidebaritems.name}}</a></td>
+			</tr><!--#/View2/{{Sidbaritems.id}}-->
 		</table>
 		<!-- mit der Sidebar soll man dann in das View 2 kommen-->
 	</div>
@@ -18,8 +31,21 @@
 		<h2>{{Column.title}}</h2>
 		<div>{{Column.main}}</div>
 	</div>
-
+	
+	<div>{{content}}</div>
 </div>
+<button ng-click="count = count + 1" ng-init="count=0">
+  Increment(+1)
+</button>
+<button ng-click="count = 199">Set Count to 199</button>
+<button ng-click="count = count - 1">Decrement(-1)</button>
+<span>
+  count: {{count}}
+</span>
+<div>
+	<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe>
+</div>
+
 
 
 

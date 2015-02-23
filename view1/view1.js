@@ -11,11 +11,11 @@ angular.module('myApp.view1', ['ngRoute'])
 							//$Scope		//$scope
 .controller('View1Ctrl', [ "$scope", "$http", function($scope, $http) {
 	$scope.Headerbuttons = [
-	{"name":"Home", "id":"Start"},
-	{"name":"Products", "id":"Products"},
-	{"name":"Impressum", "id":"Contact"},
-	{"name":"About us", "id":"Intention"},
-	{"name":"something", "id":"random"}];
+	{"name":"Home","content":"123", "id":"Start", "number":1},
+	{"name":"Products","content":"123", "id":"Products", "number":2},
+	{"name":"Impressum","content":"123", "id":"Contact", "number":3},
+	{"name":"About us","content":"D", "id":"Intention", "number":4},
+	{"name":"something","content":"123", "id":"random", "number":5}];
 
 	$scope.Sidebar = [
 	{"name":"1", "effect":"", "more":""},	
@@ -28,8 +28,17 @@ angular.module('myApp.view1', ['ngRoute'])
 	{"name":"8", "effect":"", "more":""},
 	{"name":"9", "effect":"", "more":""},];
 
-	$scope.mainColumn = [
+
+
+	//$http.get(SidebarContentJSON.php)
+
+	/*$scope.loadContent = function (Column) {
+		$scope.
+	}
+	*/
+	/*$scope.mainColumn = [
 	{"title":"Home", "main":"muss eine Variable sein!", "style":"border: dotted;float: left"}];
+
 /*
 	$http.get('Objects/SidebarContent.json').success(function(data) {
 		$scope.sidebar = data;
